@@ -36,6 +36,13 @@
                 onclick="location.href=
                 '{% url "list-delete" todo_list.id %}'" />
         </p>
+        <p>
+            <input
+                value="Back"
+                type="button"
+                onclick="location.href=
+                '{% url "index" %}'" />
+        </p>
     </div>
 </div>
 {% endblock %}
