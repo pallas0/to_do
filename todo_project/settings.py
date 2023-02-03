@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from dotenv import load_dotenv
-import os 
+import os, sys
 load_dotenv()
 from pathlib import Path
 
@@ -134,3 +134,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+
+#chatGPT advice
+if 'collectstatic' in sys.argv:
+    print("Automatically answering 'yes' to collectstatic prompt.")
+    sys.stdin = open('/dev/tty', 'r')
+    sys.stdout = open('/dev/tty', 'w')
+    sys.stderr = open('/dev/tty', 'w')
