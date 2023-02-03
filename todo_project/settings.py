@@ -132,14 +132,14 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+# Update database configuration from $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
+#these static files continue to haunt me
+#tweaking w guidance from https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-#chatGPT advice
-# if 'collectstatic' in sys.argv:
-#     print("Automatically answering 'yes' to collectstatic prompt.")
-#     sys.stdin = open('/dev/tty', 'r')
-#     sys.stdout = open('/dev/tty', 'w')
-#     sys.stderr = open('/dev/tty', 'w')
+
+#chat gpt approach to at least getting rid of the mfing static files error thing
+if os.environ.get('DJANGO_COLLECTSTATIC_YES', 'no') == 'yes':
+    COLLECTSTATIC_OPTIONS = {'interactive': False}
