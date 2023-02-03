@@ -137,8 +137,8 @@ DATABASES['default'].update(db_from_env)
 
 
 #chatGPT advice
-if 'collectstatic' in sys.argv:
-    print("Automatically answering 'yes' to collectstatic prompt.")
-    sys.stdin = open('/dev/tty', 'r')
-    sys.stdout = open('/dev/tty', 'w')
-    sys.stderr = open('/dev/tty', 'w')
+# if 'collectstatic' in sys.argv:
+#     print("Automatically answering 'yes' to collectstatic prompt.")
+#     sys.stdin = open('/dev/tty', 'r')
+#     sys.stdout = open('/dev/tty', 'w')
+#     sys.stderr = open('/dev/tty', 'w')
