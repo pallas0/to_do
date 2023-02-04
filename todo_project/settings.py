@@ -27,7 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
+#going through the MDN guide w blind obedience
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 COLLECTSTATIC_DEBUG = True
 
 ALLOWED_HOSTS = ['todo-production-7e65.up.railway.app/', '127.0.0.1', '127.0.0.1:8000']
