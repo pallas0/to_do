@@ -28,6 +28,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+COLLECTSTATIC_DEBUG = True
 
 ALLOWED_HOSTS = ['web-production-a753.up.railway.app', '127.0.0.1', '127.0.0.1:8000']
 CSRF_TRUSTED_ORIGINS = ['web-production-a753.up.railway.app/', '127.0.0.1:8000']
