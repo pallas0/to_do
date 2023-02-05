@@ -34,7 +34,9 @@ COLLECTSTATIC_DEBUG = True
 
 ALLOWED_HOSTS = ['todo-production-7e65.up.railway.app/', '127.0.0.1', '127.0.0.1:8000', 
 'todo-production-7e65.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['todo-production-7e65.up.railway.app/', '127.0.0.1:8000']
+
+CSRF_TRUSTED_ORIGINS = ['todo-production-7e65.up.railway.app/', '127.0.0.1:8000', 
+'todo-production-7e65.up.railway.app']
 
 # Application definition
 
