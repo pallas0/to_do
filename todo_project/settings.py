@@ -32,7 +32,8 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 COLLECTSTATIC_DEBUG = True
 
-ALLOWED_HOSTS = ['todo-production-7e65.up.railway.app/', '127.0.0.1', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['todo-production-7e65.up.railway.app/', '127.0.0.1', '127.0.0.1:8000', 
+'todo-production-7e65.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['todo-production-7e65.up.railway.app/', '127.0.0.1:8000']
 
 # Application definition
