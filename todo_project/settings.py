@@ -32,11 +32,11 @@ DEBUG = False
 #DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 COLLECTSTATIC_DEBUG = True
 
-ALLOWED_HOSTS = ['todo-production-7e65.up.railway.app/', '127.0.0.1', '127.0.0.1:8000', 
-'todo-production-7e65.up.railway.app']
+ALLOWED_HOSTS = ['amelias.todo.up.railway.app/', '127.0.0.1', '127.0.0.1:8000', 
+'amelias.todo.up.railway.app']
 
-CSRF_TRUSTED_ORIGINS = ['todo-production-7e65.up.railway.app/', '127.0.0.1:8000', 
-'todo-production-7e65.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['amelias.todo.up.railway.app/', '127.0.0.1:8000', 
+'amelias.todo.up.railway.app']
 
 # Application definition
 
